@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>О нас — МолодЁЖ</title>
+<meta name="description" content="История и миссия сообщества МолодЁЖ.">
+<script>
+  (function () {
+    var saved = null;
+    try { saved = localStorage.getItem("molodezh-theme"); } catch (e) {}
+    var theme = saved || (window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark");
+    document.documentElement.setAttribute("data-theme", theme);
+  })();
+</script>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <a href="index.html" class="brand">
+      <img src="Photos/лого группы.png" alt="МолодЁЖ — эмблема сообщества">
+      <span class="brand-name">Молод<span>ЁЖ</span></span>
+    </a>
+    <div class="nav-controls">
+      <button class="theme-toggle" id="themeToggle" aria-label="Переключить тему">🌙</button>
+      <button class="hamburger" id="hamburger" aria-label="Открыть меню" aria-expanded="false">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+    </div>
+    <div class="menu-panel" id="menuPanel">
+      <div class="menu-panel-inner">
+        <a href="index.html" class="menu-link">Главная</a>
+        <a href="about.html" class="menu-link active">О нас</a>
+        <a href="events.html" class="menu-link">Мероприятия</a>
+        <a href="news.html" class="menu-link">Новости</a>
+        <a href="join.html" class="menu-link">Присоединиться</a>
+        <a href="contacts.html" class="menu-link">Контакты</a>
+        <a href="join.html" class="cta-btn menu-cta">Присоединиться</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<section class="wrap narrow">
+  <span class="badge">О НАС</span>
+  <h1 class="page-title">Сообщество, где говорят на одном языке</h1>
+  <p class="lede">
+    МолодЁЖ объединяет русскоязычных подростков от 13 до 18 лет, которые живут в Новой Зеландии
+    и Австралии. Мы начали с небольшого чата в Telegram и выросли в сообщество, которое
+    встречается вживую, ездит в поездки и помогает друг другу не терять связь с языком и культурой.
+  </p>
+</section>
+
+<section class="wrap">
+  <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(240px,1fr)); gap:20px;">
+    <div class="card">
+      <h3 style="color:var(--tan); margin-bottom:10px;">Наша миссия</h3>
+      <p style="color:var(--slate); font-size:0.95rem; line-height:1.6;">
+        Дать подросткам место, где можно свободно говорить по-русски, заводить друзей
+        и оставаться собой вдали от исторической родины.
+      </p>
+    </div>
+    <div class="card">
+      <h3 style="color:var(--tan); margin-bottom:10px;">Как всё начиналось</h3>
+      <p style="color:var(--slate); font-size:0.95rem; line-height:1.6;">
+        Группа началась с нескольких семей в Окленде и Сиднее, которые захотели
+        познакомить своих детей друг с другом.
+      </p>
+    </div>
+    <div class="card">
+      <h3 style="color:var(--tan); margin-bottom:10px;">Кто нас организует</h3>
+      <p style="color:var(--slate); font-size:0.95rem; line-height:1.6;">
+        Сообществом руководят волонтёры — родители и старшие ребята, которые сами
+        когда-то через это проходили.
+      </p>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  МолодЁЖ — русскоязычное сообщество Новой Зеландии и Австралии ·
+  <a href="https://t.me/TeensNZ_bot" target="_blank" rel="noopener">Telegram</a>
+</footer>
+
+<script src="nav.js"></script>
+<script src="theme.js"></script>
+</body>
+</html>

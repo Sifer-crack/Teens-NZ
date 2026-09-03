@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Главная — МолодЁЖ</title>
+<meta name="description" content="Русскоязычное сообщество подростков Новой Зеландии и Австралии.">
+<script>
+  (function () {
+    var saved = null;
+    try { saved = localStorage.getItem("molodezh-theme"); } catch (e) {}
+    var theme = saved || (window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark");
+    document.documentElement.setAttribute("data-theme", theme);
+  })();
+</script>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <a href="index.html" class="brand">
+        <img src="Photos/лого группы.png" alt="МолодЁЖ — эмблема сообщества">
+      <span class="brand-name">Молод<span>ЁЖ</span></span>
+    </a>
+    <div class="nav-controls">
+      <button class="theme-toggle" id="themeToggle" aria-label="Переключить тему">🌙</button>
+      <button class="hamburger" id="hamburger" aria-label="Открыть меню" aria-expanded="false">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+    </div>
+    <div class="menu-panel" id="menuPanel">
+      <div class="menu-panel-inner">
+        <a href="index.html" class="menu-link active">Главная</a>
+        <a href="about.html" class="menu-link">О нас</a>
+        <a href="events.html" class="menu-link">Мероприятия</a>
+        <a href="news.html" class="menu-link">Новости</a>
+        <a href="join.html" class="menu-link">Присоединиться</a>
+        <a href="contacts.html" class="menu-link">Контакты</a>
+        <a href="join.html" class="cta-btn menu-cta">Присоединиться</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<section class="wrap" style="text-align:center; padding-top:104px;">
+  <span class="badge">РУССКОЯЗЫЧНОЕ СООБЩЕСТВО</span>
+  <h1 class="page-title" style="font-size:clamp(2.8rem, 7vw, 5rem);">МолодЁЖ</h1>
+  <p style="font-size:1.2rem; font-weight:600; color:var(--text); max-width:620px; margin:0 auto 14px; line-height:1.4;">
+    Русскоязычные подростки Новой Зеландии и Австралии — одно сообщество
+  </p>
+  <p class="lede" style="margin:0 auto 44px;">
+    Встречаемся, дружим и не теряем связь с культурой — по обе стороны Тасманова моря.
+  </p>
+  <div style="display:flex; justify-content:center; gap:16px; flex-wrap:wrap; margin-bottom:48px;">
+    <a href="join.html" class="btn-primary">Вступить в Telegram</a>
+    <a href="events.html" class="btn-outline">Ближайшие события →</a>
+  </div>
+  <div style="display:flex; justify-content:center; gap:14px; flex-wrap:wrap;">
+    <span class="pill"><span class="dot"></span>NZ Новая Зеландия</span>
+    <span class="pill"><span class="dot"></span>AU Австралия</span>
+  </div>
+</section>
+
+<section class="wrap">
+  <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(220px,1fr)); gap:20px;">
+    <div class="card">
+      <h3 style="color:var(--tan); margin-bottom:10px; font-size:1.1rem;">О нас</h3>
+      <p style="color:var(--slate); font-size:0.95rem; line-height:1.6;">Кто мы и почему собрались вместе — история сообщества.</p>
+      <a href="about.html" class="btn-outline" style="margin-top:16px; padding:9px 18px; font-size:0.85rem;">Узнать больше</a>
+    </div>
+    <div class="card">
+      <h3 style="color:var(--tan); margin-bottom:10px; font-size:1.1rem;">Мероприятия</h3>
+      <p style="color:var(--slate); font-size:0.95rem; line-height:1.6;">Встречи, поездки и праздники — календарь ближайших событий.</p>
+      <a href="events.html" class="btn-outline" style="margin-top:16px; padding:9px 18px; font-size:0.85rem;">Посмотреть</a>
+    </div>
+    <div class="card">
+      <h3 style="color:var(--tan); margin-bottom:10px; font-size:1.1rem;">Новости</h3>
+      <p style="color:var(--slate); font-size:0.95rem; line-height:1.6;">Свежие обновления из жизни сообщества в NZ и AU.</p>
+      <a href="news.html" class="btn-outline" style="margin-top:16px; padding:9px 18px; font-size:0.85rem;">Читать</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  МолодЁЖ — русскоязычное сообщество Новой Зеландии и Австралии ·
+  <a href="https://t.me/TeensNZ_bot" target="_blank" rel="noopener">Telegram</a>
+</footer>
+
+<script src="nav.js"></script>
+<script src="theme.js"></script>
+</body>
+</html>

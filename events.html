@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Мероприятия — МолодЁЖ</title>
+<meta name="description" content="Ближайшие встречи сообщества МолодЁЖ в NZ и AU.">
+<script>
+  (function () {
+    var saved = null;
+    try { saved = localStorage.getItem("molodezh-theme"); } catch (e) {}
+    var theme = saved || (window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark");
+    document.documentElement.setAttribute("data-theme", theme);
+  })();
+</script>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <a href="index.html" class="brand">
+      <img src="Photos/лого группы.png" alt="МолодЁЖ — эмблема сообщества">
+      <span class="brand-name">Молод<span>ЁЖ</span></span>
+    </a>
+    <div class="nav-controls">
+      <button class="theme-toggle" id="themeToggle" aria-label="Переключить тему">🌙</button>
+      <button class="hamburger" id="hamburger" aria-label="Открыть меню" aria-expanded="false">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+    </div>
+    <div class="menu-panel" id="menuPanel">
+      <div class="menu-panel-inner">
+        <a href="index.html" class="menu-link">Главная</a>
+        <a href="about.html" class="menu-link">О нас</a>
+        <a href="events.html" class="menu-link">Мероприятия</a>
+        <a href="news.html" class="menu-link">Новости</a>
+        <a href="join.html" class="menu-link">Присоединиться</a>
+        <a href="contacts.html" class="menu-link">Контакты</a>
+        <a href="join.html" class="cta-btn menu-cta">Присоединиться</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<section class="wrap narrow">
+  <span class="badge">МЕРОПРИЯТИЯ</span>
+  <h1 class="page-title">Ближайшие встречи</h1>
+  <p class="lede">Собираемся раз в месяц то в Окленде, то в Сиднее — и на праздники устраиваем что-то особенное.</p>
+</section>
+
+<section class="wrap">
+  <div style="display:flex; flex-direction:column; gap:16px;">
+    <div class="card" style="display:flex; justify-content:space-between; align-items:center; gap:20px; flex-wrap:wrap;">
+      <div>
+        <h3 style="color:var(--cream); margin-bottom:6px;">Пикник в парке Domain</h3>
+        <p style="color:var(--slate); font-size:0.9rem;">Окленд, Новая Зеландия</p>
+      </div>
+      <span class="pill"><span class="dot"></span>14 сентября</span>
+    </div>
+    <div class="card" style="display:flex; justify-content:space-between; align-items:center; gap:20px; flex-wrap:wrap;">
+      <div>
+        <h3 style="color:var(--cream); margin-bottom:6px;">Настольные игры и чай</h3>
+        <p style="color:var(--slate); font-size:0.9rem;">Сидней, Австралия</p>
+      </div>
+      <span class="pill"><span class="dot"></span>28 сентября</span>
+    </div>
+    <div class="card" style="display:flex; justify-content:space-between; align-items:center; gap:20px; flex-wrap:wrap;">
+      <div>
+        <h3 style="color:var(--cream); margin-bottom:6px;">Осенний костёр у моря</h3>
+        <p style="color:var(--slate); font-size:0.9rem;">Веллингтон, Новая Зеландия</p>
+      </div>
+      <span class="pill"><span class="dot"></span>12 октября</span>
+    </div>
+  </div>
+  <div style="text-align:center; margin-top:44px;">
+    <a href="join.html" class="btn-primary">Следить за анонсами</a>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  МолодЁЖ — русскоязычное сообщество Новой Зеландии и Австралии ·
+  <a href="https://t.me/TeensNZ_bot" target="_blank" rel="noopener">Telegram</a>
+</footer>
+
+<script src="nav.js"></script>
+<script src="theme.js"></script>
+</body>
+</html>
