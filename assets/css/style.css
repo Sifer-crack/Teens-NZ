@@ -151,7 +151,13 @@ header{
   letter-spacing:0.01em;
   color: var(--text);
 }
-.brand-name span{ color: var(--accent); }
+.brand-name span{
+  color: var(--accent);
+  display:inline-block;
+  padding:1px 6px;
+  border:1px solid #FFFFFF;
+  border-radius:4px;
+}
 
 .nav-controls{
   display:flex;
@@ -339,7 +345,13 @@ h1.page-title{
   margin-bottom:22px;
 }
 
-.page-title .brand-accent{ color: var(--accent); }
+.page-title .brand-accent{
+  color: var(--accent);
+  display:inline-block;
+  padding:1px 8px;
+  border:1px solid #FFFFFF;
+  border-radius:6px;
+}
 
 p.lede{
   font-size:1.05rem;
