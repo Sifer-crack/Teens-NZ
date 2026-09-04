@@ -1,0 +1,18 @@
+# Environment
+# Real env values are never committed; copy .env.example to .env instead.
+.env
+.env.local
+.env.*.local
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+
+# Deploy / build artifacts (site is static — keep clean if exported later)
+dist/
+build/
+out/
+node_modules/
