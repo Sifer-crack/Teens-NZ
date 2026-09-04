@@ -27,6 +27,7 @@
   --btn-hover-text: var(--ink);
   --btn-ghost-border: var(--tan);
   --btn-ghost-bg: rgba(233,180,106,0.08);
+  --footer-link-hover: var(--tan);
   --footer-bg: rgba(15,14,13,0.55);
   --glow-1: rgba(15,47,102,0.55);
   --glow-2: rgba(217,138,58,0.14);
@@ -51,6 +52,7 @@
   --btn-hover-text: var(--cream);
   --btn-ghost-border: #4A3626;
   --btn-ghost-bg: rgba(58,43,30,0.12);
+  --footer-link-hover: #4A3626;
   --footer-bg: rgba(58,43,30,0.05);
   --glow-1: rgba(139,102,66,0.14);
   --glow-2: rgba(217,138,58,0.18);
@@ -371,7 +373,7 @@ footer{
   font-size:0.9rem;
   transition: color .2s ease;
 }
-.footer-legal a:hover, .footer-contact a:hover{ color: var(--tan); }
+.footer-legal a:hover, .footer-contact a:hover{ color: var(--footer-link-hover); }
 .footer-contact{ align-items:flex-end; }
 .footer-contact .email{ font-weight:600; }
 
