@@ -21,6 +21,7 @@
   --card-heading: var(--tan);
   --card-title: var(--cream);
   --card-text: var(--slate);
+  --accent: var(--tan);
   --pill-bg: rgba(15,47,102,0.55);
   --pill-text: var(--lavender);
   --btn-hover: var(--tan);
@@ -46,6 +47,7 @@
   --card-heading: #4A3626;
   --card-title: #3A2B1E;
   --card-text: #6B5D4B;
+  --accent: #6E4A24;
   --pill-bg: #F3E5C6;
   --pill-text: var(--card-text);
   --btn-hover: #6E4A24;
@@ -60,6 +62,9 @@
 
 *{ box-sizing:border-box; margin:0; padding:0; }
 html{ scroll-behavior:smooth; }
+
+::selection{ background: var(--tan); color: var(--ink); }
+:root[data-theme="light"] ::selection{ background: var(--accent); color: var(--cream); }
 
 body{
   background: var(--bg);
@@ -146,7 +151,7 @@ header{
   letter-spacing:0.01em;
   color: var(--text);
 }
-.brand-name span{ color: var(--tan); }
+.brand-name span{ color: var(--accent); }
 
 .nav-controls{
   display:flex;
@@ -170,7 +175,7 @@ header{
   flex-shrink:0;
   transition: border-color .2s ease, background .2s ease, transform .2s ease;
 }
-.theme-toggle:hover{ border-color: var(--tan); background: rgba(233,180,106,0.08); transform: translateY(-1px); }
+.theme-toggle:hover{ border-color: var(--accent); background: rgba(233,180,106,0.08); transform: translateY(-1px); }
 
 /* Hamburger button */
 .hamburger{
@@ -188,7 +193,7 @@ header{
   flex-shrink:0;
   transition: border-color .2s ease, background .2s ease;
 }
-.hamburger:hover{ border-color: var(--tan); background: rgba(233,180,106,0.08); }
+.hamburger:hover{ border-color: var(--accent); background: rgba(233,180,106,0.08); }
 
 .hamburger .bar{
   width:18px;
@@ -235,7 +240,7 @@ header{
 }
 .menu-panel a.menu-link:hover,
 .menu-panel a.menu-link.active{ color: var(--text); padding-left:12px; }
-.menu-panel a.menu-link.active{ color: var(--tan); }
+.menu-panel a.menu-link.active{ color: var(--accent); }
 
 .menu-panel .menu-cta{
   margin-top:16px;
@@ -307,7 +312,7 @@ header{
   color: var(--pill-text);
   transition: background .25s ease;
 }
-.pill .dot{ width:8px; height:8px; border-radius:50%; background: var(--tan); }
+.pill .dot{ width:8px; height:8px; border-radius:50%; background: var(--accent); }
 
 .card{
   background: var(--card-bg);
@@ -334,7 +339,7 @@ h1.page-title{
   margin-bottom:22px;
 }
 
-.page-title .brand-accent{ color: var(--tan); }
+.page-title .brand-accent{ color: var(--accent); }
 
 p.lede{
   font-size:1.05rem;
@@ -430,7 +435,7 @@ footer{
   cursor:pointer;
   transition: border-color .2s ease, background .2s ease;
 }
-.pdf-modal-close:hover{ border-color: var(--tan); background: rgba(233,180,106,0.1); }
+.pdf-modal-close:hover{ border-color: var(--accent); background: rgba(233,180,106,0.1); }
 .pdf-modal-frame{
   flex:1;
   width:100%;
@@ -443,7 +448,7 @@ footer{
   font-size:0.95rem;
   line-height:1.6;
 }
-.pdf-modal-fallback a{ color: var(--tan); }
+.pdf-modal-fallback a{ color: var(--accent); }
 
 @media (max-width: 760px){
   .nav{ padding:14px 20px; }
