@@ -58,31 +58,57 @@
 <section class="wrap">
   <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(220px,1fr)); gap:20px;">
     <div class="card">
-      <h3 style="color:var(--tan); margin-bottom:10px;">Telegram</h3>
-      <p style="color:var(--slate); font-size:0.95rem; margin-bottom:6px;">Основной канал связи с командой и участниками.</p>
-      <p style="color:var(--cream); font-size:0.9rem; margin-bottom:14px;">@TeensNZ_bot</p>
+      <h3 style="color:var(--card-heading); margin-bottom:10px;">Telegram</h3>
+      <p style="color:var(--card-text); font-size:0.95rem; margin-bottom:6px;">Основной канал связи с командой и участниками.</p>
+      <p style="color:var(--card-title); font-size:0.9rem; margin-bottom:14px;">@TeensNZ_bot</p>
       <a href="https://t.me/TeensNZ_bot" target="_blank" rel="noopener" class="btn-outline" style="padding:9px 18px; font-size:0.85rem;">Открыть чат</a>
     </div>
     <div class="card">
-      <h3 style="color:var(--tan); margin-bottom:10px;">Электронная почта</h3>
-      <p style="color:var(--slate); font-size:0.95rem; margin-bottom:14px;">Для вопросов от родителей и партнёров.</p>
+      <h3 style="color:var(--card-heading); margin-bottom:10px;">Электронная почта</h3>
+      <p style="color:var(--card-text); font-size:0.95rem; margin-bottom:14px;">Для вопросов от родителей и партнёров.</p>
       <a href="mailto:hello@molodezh.community" class="btn-outline" style="padding:9px 18px; font-size:0.85rem;">hello@molodezh.community</a>
     </div>
     <div class="card">
-      <h3 style="color:var(--tan); margin-bottom:10px;">Города</h3>
-      <p style="color:var(--slate); font-size:0.95rem; line-height:1.6;">Окленд · Веллингтон · Сидней · Мельбурн · Брисбен</p>
+      <h3 style="color:var(--card-heading); margin-bottom:10px;">Города</h3>
+      <p style="color:var(--card-text); font-size:0.95rem; line-height:1.6;">Окленд · Веллингтон · Сидней · Мельбурн · Брисбен</p>
     </div>
   </div>
 </section>
 
 </main>
 
-<footer>
-  МолодЁЖ — русскоязычное сообщество Новой Зеландии и Австралии ·
-  <a href="https://t.me/TeensNZ_bot" target="_blank" rel="noopener">Telegram</a>
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-col footer-brand">
+      <span class="brand-name">Молод<span>ЁЖ</span></span>
+      <p>Русскоязычное сообщество подростков Новой Зеландии и Австралии.</p>
+      <nav class="footer-legal">
+        <a href="#" data-pdf-src="../assets/docs/privacy-policy.pdf" data-pdf-title="Политика конфиденциальности">Политика конфиденциальности</a>
+        <a href="#" data-pdf-src="../assets/docs/terms-of-use.pdf" data-pdf-title="Условия использования">Условия использования</a>
+      </nav>
+    </div>
+    <div class="footer-col footer-contact">
+      <a href="https://t.me/TeensNZ_bot" target="_blank" rel="noopener">Telegram</a>
+      <a href="mailto:nzslavteens@gmail.com" class="email">nzslavteens@gmail.com</a>
+    </div>
+  </div>
 </footer>
+
+<div class="pdf-modal" id="pdfModal" aria-hidden="true">
+  <div class="pdf-modal-backdrop" data-close-pdf></div>
+  <div class="pdf-modal-box" role="dialog" aria-modal="true" aria-labelledby="pdfModalTitle">
+    <div class="pdf-modal-head">
+      <h3 id="pdfModalTitle">Документ</h3>
+      <button class="pdf-modal-close" data-close-pdf aria-label="Закрыть">×</button>
+    </div>
+    <object class="pdf-modal-frame" id="pdfModalFrame" type="application/pdf" data="../assets/docs/privacy-policy.pdf" title="Документ">
+      <p class="pdf-modal-fallback">Ваш браузер не поддерживает встроенный просмотр PDF. <a href="../assets/docs/privacy-policy.pdf" target="_blank" rel="noopener">Скачать PDF</a></p>
+    </object>
+  </div>
+</div>
 
 <script src="../assets/js/nav.js"></script>
 <script src="../assets/js/theme.js"></script>
+<script src="../assets/js/pdf-viewer.js"></script>
 </body>
 </html>

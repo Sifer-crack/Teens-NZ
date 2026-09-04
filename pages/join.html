@@ -56,7 +56,7 @@
     Заполните короткую форму или сразу заходите в наш Telegram-бот — модераторы подскажут,
     какие встречи проходят ближе всего к вам.
   </p>
-  <p style="color:var(--tan); font-weight:600; margin-bottom:32px;">@TeensNZ_bot</p>
+  <p style="color:var(--card-heading); font-weight:600; margin-bottom:32px;">@TeensNZ_bot</p>
   <div style="display:flex; justify-content:center; gap:16px; flex-wrap:wrap; margin-bottom:56px;">
     <a href="https://t.me/TeensNZ_bot" target="_blank" rel="noopener" class="btn-primary">Вступить в Telegram</a>
     <a href="contacts.html" class="btn-outline">Задать вопрос</a>
@@ -66,28 +66,54 @@
 <section class="wrap">
   <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(200px,1fr)); gap:20px; text-align:left;">
     <div class="card">
-      <h3 style="color:var(--tan); margin-bottom:10px; font-size:1rem;">1. Напишите нам</h3>
-      <p style="color:var(--slate); font-size:0.9rem; line-height:1.6;">В Telegram-чате или через форму на странице контактов.</p>
+      <h3 style="color:var(--card-heading); margin-bottom:10px; font-size:1rem;">1. Напишите нам</h3>
+      <p style="color:var(--card-text); font-size:0.9rem; line-height:1.6;">В Telegram-чате или через форму на странице контактов.</p>
     </div>
     <div class="card">
-      <h3 style="color:var(--tan); margin-bottom:10px; font-size:1rem;">2. Познакомьтесь с модератором</h3>
-      <p style="color:var(--slate); font-size:0.9rem; line-height:1.6;">Коротко расскажете о себе — где живёте и сколько вам лет.</p>
+      <h3 style="color:var(--card-heading); margin-bottom:10px; font-size:1rem;">2. Познакомьтесь с модератором</h3>
+      <p style="color:var(--card-text); font-size:0.9rem; line-height:1.6;">Коротко расскажете о себе — где живёте и сколько вам лет.</p>
     </div>
     <div class="card">
-      <h3 style="color:var(--tan); margin-bottom:10px; font-size:1rem;">3. Приходите на встречу</h3>
-      <p style="color:var(--slate); font-size:0.9rem; line-height:1.6;">Первая встреча — лучший способ познакомиться со всеми.</p>
+      <h3 style="color:var(--card-heading); margin-bottom:10px; font-size:1rem;">3. Приходите на встречу</h3>
+      <p style="color:var(--card-text); font-size:0.9rem; line-height:1.6;">Первая встреча — лучший способ познакомиться со всеми.</p>
     </div>
   </div>
 </section>
 
 </main>
 
-<footer>
-  МолодЁЖ — русскоязычное сообщество Новой Зеландии и Австралии ·
-  <a href="https://t.me/TeensNZ_bot" target="_blank" rel="noopener">Telegram</a>
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-col footer-brand">
+      <span class="brand-name">Молод<span>ЁЖ</span></span>
+      <p>Русскоязычное сообщество подростков Новой Зеландии и Австралии.</p>
+      <nav class="footer-legal">
+        <a href="#" data-pdf-src="../assets/docs/privacy-policy.pdf" data-pdf-title="Политика конфиденциальности">Политика конфиденциальности</a>
+        <a href="#" data-pdf-src="../assets/docs/terms-of-use.pdf" data-pdf-title="Условия использования">Условия использования</a>
+      </nav>
+    </div>
+    <div class="footer-col footer-contact">
+      <a href="https://t.me/TeensNZ_bot" target="_blank" rel="noopener">Telegram</a>
+      <a href="mailto:nzslavteens@gmail.com" class="email">nzslavteens@gmail.com</a>
+    </div>
+  </div>
 </footer>
+
+<div class="pdf-modal" id="pdfModal" aria-hidden="true">
+  <div class="pdf-modal-backdrop" data-close-pdf></div>
+  <div class="pdf-modal-box" role="dialog" aria-modal="true" aria-labelledby="pdfModalTitle">
+    <div class="pdf-modal-head">
+      <h3 id="pdfModalTitle">Документ</h3>
+      <button class="pdf-modal-close" data-close-pdf aria-label="Закрыть">×</button>
+    </div>
+    <object class="pdf-modal-frame" id="pdfModalFrame" type="application/pdf" data="../assets/docs/privacy-policy.pdf" title="Документ">
+      <p class="pdf-modal-fallback">Ваш браузер не поддерживает встроенный просмотр PDF. <a href="../assets/docs/privacy-policy.pdf" target="_blank" rel="noopener">Скачать PDF</a></p>
+    </object>
+  </div>
+</div>
 
 <script src="../assets/js/nav.js"></script>
 <script src="../assets/js/theme.js"></script>
+<script src="../assets/js/pdf-viewer.js"></script>
 </body>
 </html>

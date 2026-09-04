@@ -18,24 +18,32 @@
   --panel-bg: rgba(15,14,13,0.98);
   --card-bg: rgba(15,47,102,0.35);
   --card-border: rgba(185,183,200,0.15);
+  --card-heading: var(--tan);
+  --card-title: var(--cream);
+  --card-text: var(--slate);
   --pill-bg: rgba(15,47,102,0.55);
+  --footer-bg: rgba(15,14,13,0.55);
   --glow-1: rgba(15,47,102,0.55);
   --glow-2: rgba(217,138,58,0.14);
 }
 
 :root[data-theme="light"]{
-  --bg: var(--cream);
-  --text: var(--ink);
-  --muted: #675F73;
-  --border: rgba(15,23,42,0.12);
-  --border-soft: rgba(15,23,42,0.2);
-  --header-bg: rgba(245,243,238,0.92);
-  --panel-bg: rgba(245,243,238,0.98);
-  --card-bg: rgba(15,47,102,0.92);
-  --card-border: rgba(255,255,255,0.14);
+  --bg: #EAD9BE;
+  --text: #3A2B1E;
+  --muted: #6B5D4B;
+  --border: rgba(58,43,30,0.14);
+  --border-soft: rgba(58,43,30,0.22);
+  --header-bg: rgba(234,217,190,0.92);
+  --panel-bg: rgba(234,217,190,0.98);
+  --card-bg: #F3E5C6;
+  --card-border: rgba(58,43,30,0.12);
+  --card-heading: #4A3626;
+  --card-title: #3A2B1E;
+  --card-text: #6B5D4B;
   --pill-bg: rgba(15,47,102,0.9);
-  --glow-1: rgba(15,47,102,0.10);
-  --glow-2: rgba(217,138,58,0.16);
+  --footer-bg: rgba(58,43,30,0.05);
+  --glow-1: rgba(139,102,66,0.14);
+  --glow-2: rgba(217,138,58,0.18);
 }
 
 *{ box-sizing:border-box; margin:0; padding:0; }
@@ -313,6 +321,8 @@ h1.page-title{
   margin-bottom:22px;
 }
 
+.page-title .brand-accent{ color: var(--tan); }
+
 p.lede{
   font-size:1.05rem;
   color: var(--muted);
@@ -324,15 +334,107 @@ footer{
   position:relative;
   z-index:1;
   border-top:1px solid var(--border);
-  padding:36px 32px;
-  text-align:center;
-  color: var(--muted);
-  font-size:0.85rem;
-  transition: border-color .25s ease;
+  background: var(--footer-bg);
+  transition: border-color .25s ease, background .25s ease;
 }
-footer a{ color: var(--tan); }
+.footer-inner{
+  max-width:1080px;
+  margin:0 auto;
+  padding:44px 32px 36px;
+  display:flex;
+  justify-content:space-between;
+  gap:40px;
+  flex-wrap:wrap;
+}
+.footer-col{ display:flex; flex-direction:column; gap:6px; }
+.footer-brand{ max-width:380px; }
+.footer-brand p{
+  color: var(--muted);
+  font-size:0.9rem;
+  line-height:1.6;
+  margin-top:10px;
+}
+.footer-legal{ display:flex; flex-direction:column; gap:8px; margin-top:16px; }
+.footer-legal a, .footer-contact a{
+  color: var(--text);
+  font-size:0.9rem;
+  transition: color .2s ease;
+}
+.footer-legal a:hover, .footer-contact a:hover{ color: var(--tan); }
+.footer-contact{ align-items:flex-end; }
+.footer-contact .email{ font-weight:600; }
+
+/* ---------- PDF MODAL ---------- */
+.pdf-modal{
+  position:fixed;
+  inset:0;
+  z-index:100;
+  display:none;
+  align-items:center;
+  justify-content:center;
+  padding:20px;
+}
+.pdf-modal.is-open{ display:flex; }
+.pdf-modal-backdrop{
+  position:absolute;
+  inset:0;
+  background: rgba(0,0,0,0.6);
+  backdrop-filter: blur(3px);
+}
+.pdf-modal-box{
+  position:relative;
+  width:100%;
+  max-width:900px;
+  height:88vh;
+  background: var(--panel-bg);
+  border:1px solid var(--border);
+  border-radius:18px;
+  overflow:hidden;
+  display:flex;
+  flex-direction:column;
+  box-shadow: 0 24px 60px rgba(0,0,0,0.4);
+}
+.pdf-modal-head{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:16px 24px;
+  border-bottom:1px solid var(--border);
+}
+.pdf-modal-head h3{
+  font-size:1.05rem;
+  color: var(--text);
+}
+.pdf-modal-close{
+  width:36px;
+  height:36px;
+  border-radius:50%;
+  border:1px solid var(--border-soft);
+  background: transparent;
+  color: var(--text);
+  font-size:1.3rem;
+  line-height:1;
+  cursor:pointer;
+  transition: border-color .2s ease, background .2s ease;
+}
+.pdf-modal-close:hover{ border-color: var(--tan); background: rgba(233,180,106,0.1); }
+.pdf-modal-frame{
+  flex:1;
+  width:100%;
+  border:none;
+  background: #fff;
+}
+.pdf-modal-fallback{
+  padding:24px;
+  color: var(--muted);
+  font-size:0.95rem;
+  line-height:1.6;
+}
+.pdf-modal-fallback a{ color: var(--tan); }
 
 @media (max-width: 760px){
   .nav{ padding:14px 20px; }
   section.wrap{ padding:56px 20px; }
+  .footer-inner{ padding:36px 20px; gap:28px; }
+  .footer-contact{ align-items:flex-start; }
 }

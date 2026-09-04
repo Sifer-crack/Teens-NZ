@@ -58,25 +58,25 @@
 <section class="wrap">
   <div style="display:flex; flex-direction:column; gap:20px;">
     <div class="card">
-      <p style="color:var(--tan); font-size:0.85rem; margin-bottom:8px;">Август 2026</p>
-      <h3 style="color:var(--cream); margin-bottom:8px;">Сообщество перешагнуло отметку в 300 участников</h3>
-      <p style="color:var(--slate); font-size:0.95rem; line-height:1.6;">
+      <p style="color:var(--card-heading); font-size:0.85rem; margin-bottom:8px;">Август 2026</p>
+      <h3 style="color:var(--card-title); margin-bottom:8px;">Сообщество перешагнуло отметку в 300 участников</h3>
+      <p style="color:var(--card-text); font-size:0.95rem; line-height:1.6;">
         За последний год к нам присоединились ребята из Крайстчерча, Мельбурна и Брисбена —
         теперь встречи проходят сразу в нескольких городах.
       </p>
     </div>
     <div class="card">
-      <p style="color:var(--tan); font-size:0.85rem; margin-bottom:8px;">Июль 2026</p>
-      <h3 style="color:var(--cream); margin-bottom:8px;">Запустили клуб по интересам</h3>
-      <p style="color:var(--slate); font-size:0.95rem; line-height:1.6;">
+      <p style="color:var(--card-heading); font-size:0.85rem; margin-bottom:8px;">Июль 2026</p>
+      <h3 style="color:var(--card-title); margin-bottom:8px;">Запустили клуб по интересам</h3>
+      <p style="color:var(--card-text); font-size:0.95rem; line-height:1.6;">
         Небольшие группы по 5-7 человек теперь встречаются отдельно — от настольных игр до
         совместного чтения книг на русском.
       </p>
     </div>
     <div class="card">
-      <p style="color:var(--tan); font-size:0.85rem; margin-bottom:8px;">Июнь 2026</p>
-      <h3 style="color:var(--cream); margin-bottom:8px;">Новый логотип и обновлённый сайт</h3>
-      <p style="color:var(--slate); font-size:0.95rem; line-height:1.6;">
+      <p style="color:var(--card-heading); font-size:0.85rem; margin-bottom:8px;">Июнь 2026</p>
+      <h3 style="color:var(--card-title); margin-bottom:8px;">Новый логотип и обновлённый сайт</h3>
+      <p style="color:var(--card-text); font-size:0.95rem; line-height:1.6;">
         Мы обновили визуальный стиль сообщества — теперь у нас есть собственная эмблема
         и фирменные цвета.
       </p>
@@ -86,12 +86,38 @@
 
 </main>
 
-<footer>
-  МолодЁЖ — русскоязычное сообщество Новой Зеландии и Австралии ·
-  <a href="https://t.me/TeensNZ_bot" target="_blank" rel="noopener">Telegram</a>
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-col footer-brand">
+      <span class="brand-name">Молод<span>ЁЖ</span></span>
+      <p>Русскоязычное сообщество подростков Новой Зеландии и Австралии.</p>
+      <nav class="footer-legal">
+        <a href="#" data-pdf-src="../assets/docs/privacy-policy.pdf" data-pdf-title="Политика конфиденциальности">Политика конфиденциальности</a>
+        <a href="#" data-pdf-src="../assets/docs/terms-of-use.pdf" data-pdf-title="Условия использования">Условия использования</a>
+      </nav>
+    </div>
+    <div class="footer-col footer-contact">
+      <a href="https://t.me/TeensNZ_bot" target="_blank" rel="noopener">Telegram</a>
+      <a href="mailto:nzslavteens@gmail.com" class="email">nzslavteens@gmail.com</a>
+    </div>
+  </div>
 </footer>
+
+<div class="pdf-modal" id="pdfModal" aria-hidden="true">
+  <div class="pdf-modal-backdrop" data-close-pdf></div>
+  <div class="pdf-modal-box" role="dialog" aria-modal="true" aria-labelledby="pdfModalTitle">
+    <div class="pdf-modal-head">
+      <h3 id="pdfModalTitle">Документ</h3>
+      <button class="pdf-modal-close" data-close-pdf aria-label="Закрыть">×</button>
+    </div>
+    <object class="pdf-modal-frame" id="pdfModalFrame" type="application/pdf" data="../assets/docs/privacy-policy.pdf" title="Документ">
+      <p class="pdf-modal-fallback">Ваш браузер не поддерживает встроенный просмотр PDF. <a href="../assets/docs/privacy-policy.pdf" target="_blank" rel="noopener">Скачать PDF</a></p>
+    </object>
+  </div>
+</div>
 
 <script src="../assets/js/nav.js"></script>
 <script src="../assets/js/theme.js"></script>
+<script src="../assets/js/pdf-viewer.js"></script>
 </body>
 </html>
