@@ -28,6 +28,26 @@ assets/
 полностью статичен — ничего из `.env` в рантайме не читается; эти переменные
 предназначены для будущего хостинга, API или сборки.
 
+## Деплой
+
+Статический сайт автоматически деплоится на Cloudflare Pages через GitHub Actions
+(`.github/workflows/deploy.yml`). Без шага сборки — корень репозитория загружается как есть.
+
+| Ветка  | Проект Cloudflare Pages | URL |
+| ------ | ----------------------- | --- |
+| `main` | `teens-nz-prod`         | `nzslavteens.com` |
+| `dev`  | `teens-nz-dev`          | `dev.nzslavteens.com` |
+
+### Необходимые секреты репозитория GitHub
+- `CLOUDFLARE_API_TOKEN` — токен Cloudflare с правом **Account → Cloudflare Pages → Edit**.
+- `CLOUDFLARE_ACCOUNT_ID` — ID аккаунта Cloudflare (из дашборда или `wrangler whoami`).
+
+### Настройка Cloudflare (один раз)
+1. Создайте два проекта Pages и задайте имена `teens-nz-prod` и `teens-nz-dev`.
+2. Привяжите кастомные домены: `nzslavteens.com` на продакшн-проект,
+   `dev.nzslavteens.com` на dev-проект.
+3. Укажите DNS на соответствующие `<project>.pages.dev`.
+
 ## Заметки
 
 - Весь пользовательский контент — **на русском**. Новый текст пишите на русском.

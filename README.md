@@ -28,6 +28,27 @@ server, linter, test, or typecheck.
 — nothing reads `.env` at runtime yet; these variables are intended for a future
 host, API, or build pipeline.
 
+## Deployment
+
+Static site deployed automatically to Cloudflare Pages via GitHub Actions
+(`.github/workflows/deploy.yml`). No build step — the repo root is uploaded as-is.
+
+| Branch | Cloudflare Pages project | URL |
+| ------ | ------------------------ | --- |
+| `main` | `teens-nz-prod`          | `nzslavteens.com` |
+| `dev`  | `teens-nz-dev`           | `dev.nzslavteens.com` |
+
+### Required GitHub repo secrets
+- `CLOUDFLARE_API_TOKEN` — Cloudflare API token with **Account → Cloudflare Pages → Edit**.
+- `CLOUDFLARE_ACCOUNT_ID` — Cloudflare account ID (from dashboard or `wrangler whoami`).
+
+### One-time Cloudflare setup
+1. Create two Pages projects and set their project names to `teens-nz-prod` and
+   `teens-nz-dev`.
+2. Attach custom domains: `nzslavteens.com` on the prod project, `dev.nzslavteens.com`
+   on the dev project.
+3. Point DNS at the respective `<project>.pages.dev` targets.
+
 ## Notes
 
 - All user-facing content is **in Russian**. Write new copy in Russian.
