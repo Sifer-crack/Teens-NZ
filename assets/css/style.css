@@ -22,6 +22,7 @@
   --card-title: var(--cream);
   --card-text: var(--slate);
   --pill-bg: rgba(15,47,102,0.55);
+  --pill-text: var(--lavender);
   --footer-bg: rgba(15,14,13,0.55);
   --glow-1: rgba(15,47,102,0.55);
   --glow-2: rgba(217,138,58,0.14);
@@ -40,7 +41,8 @@
   --card-heading: #4A3626;
   --card-title: #3A2B1E;
   --card-text: #6B5D4B;
-  --pill-bg: rgba(15,47,102,0.9);
+  --pill-bg: #F3E5C6;
+  --pill-text: var(--card-text);
   --footer-bg: rgba(58,43,30,0.05);
   --glow-1: rgba(139,102,66,0.14);
   --glow-2: rgba(217,138,58,0.18);
@@ -198,6 +200,7 @@ header{
   right:0;
   background: var(--panel-bg);
   border-bottom: 1px solid var(--border);
+  box-shadow: 0 8px 16px -8px rgba(0,0,0,0.35);
   max-height:0;
   overflow:hidden;
   transition: max-height .32s ease, background .25s ease;
@@ -291,7 +294,7 @@ header{
   background: var(--pill-bg);
   border:1px solid var(--card-border);
   font-size:0.85rem;
-  color: var(--lavender);
+  color: var(--pill-text);
   transition: background .25s ease;
 }
 .pill .dot{ width:8px; height:8px; border-radius:50%; background: var(--tan); }
