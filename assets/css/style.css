@@ -67,6 +67,23 @@ body::before{
 a{ color:inherit; text-decoration:none; }
 main{ flex:1; position:relative; z-index:1; }
 
+/* ---------- PREVIEW BANNER ---------- */
+.preview-banner{
+  position:sticky;
+  top:0;
+  z-index:31;
+  width:100%;
+  background: var(--orange);
+  color: var(--ink);
+  text-align:center;
+  padding:9px 20px;
+  font-size:0.85rem;
+  font-weight:600;
+  letter-spacing:0.02em;
+  border-bottom:1px solid rgba(0,0,0,0.12);
+  transition: background .25s ease;
+}
+
 /* ---------- NAV ---------- */
 header{
   position:sticky;
