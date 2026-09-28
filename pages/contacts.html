@@ -75,9 +75,20 @@
   </div>
 </section>
 
+<section class="wrap narrow">
+  <div class="card">
+    <h3 style="color: var(--tan); margin-bottom: 10px;">Политика Конфиденциальности</h3>
+    <p style="color: var(--slate); font-size: 0.95rem; margin-bottom: 14px;">Как мы обрабатываем и защищаем ваши данные.</p>
+    <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+      <button class="btn-outline" style="padding:9px 18px; font-size:0.85rem; cursor:pointer;" onclick="openPolicy('ru')">Русский</button>
+      <button class="btn-outline" style="padding:9px 18px; font-size:0.85rem; cursor:pointer;" onclick="openPolicy('en')">English</button>
+    </div>
+  </div>
+</section>
+
 </main>
 
-<!-- Privacy policy modal viewer -->
+<!-- Privacy policy modal viewer --> 
  <div id="policyModal" class="policy-modal" aria-hidden="true">
   <div class="policy-modal-backdrop" onclick="closePolicy()"></div>
   <div class="policy-modal-panel">
@@ -87,9 +98,11 @@
         <button id="tabEn" class="policy-tab" onclick="switchLang('en')">English</button>
       </div>
       <div style="display: flex; align-items: center; gap: 10px;">
-        
+        <a id="policyDownload" href="#" download class="btn-outline" style="padding: 8px 16px; font-size: 0.82rem;">Скачать PDF</a>
+        <button class="policy-close" onclick="closePolicy()" aria-label="Закрыть">&times;</button>
       </div>
     </div>
+    <iframe id="policyFrame" class="policy-frame" title="Privacy Policy"></iframe>
   </div>
  </div>
 
