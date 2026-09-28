@@ -138,6 +138,46 @@
 
 <script src="../assets/js/nav.js"></script>
 <script src="../assets/js/theme.js"></script>
-<script src="../assets/js/pdf-viewer.js"></script>
+<script>
+  const policyFiles = {
+    ru: "../assets/docs/privacy-policy.pdf",
+    en: "../assets/docs/terms-of-use.pdf"
+  };
+  let currentLang = 'ru';
+
+  function openPolicy(lang) {
+    currentLang = lang;
+    document.getElementById('policyFrame').src = policyFiles[lang] + "#toolbar=1";
+    document.getElementById('policyDownload').href = policyFiles[lang];
+    document.getElementById('policyModal').classList.add('is-open');
+    document.getElementById('policyModal').setAttribute('aria-hidden', 'false');
+    updateTools();
+    document.body.style.overflow = 'hidden';
+  }
+
+  function switchLang(lang) {
+    currentLang = lang;
+    document.getElementById('policyFrame').src = policyFiles[lang] + "#toolbar=1";
+    document.getElementById('policyDownload').href = policyFiles[lang];
+    updateTabs();
+  }
+
+  function updateTabs() {
+    document.getElementById('tabRu').classList.toggle('active', currentLang === 'ru');
+    document.getElementById('tabEn').classList.toggle('active', currentLang === 'en');
+  }
+
+  function closePolicy() {
+    document.getElementById('policyModal').classList.remove('is-open');
+    document.getElementById('policyModal').setAttribute('aria-hidden', 'true');
+    document.getElementById('policyFrame').src = '';
+    document.body.style.overflow = '';
+  }
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closePolicy();
+  });
+
+</script>
 </body>
 </html>
