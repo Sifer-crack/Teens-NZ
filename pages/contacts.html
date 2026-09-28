@@ -77,6 +77,22 @@
 
 </main>
 
+<!-- Privacy policy modal viewer -->
+ <div id="policyModal" class="policy-modal" aria-hidden="true">
+  <div class="policy-modal-backdrop" onclick="closePolicy()"></div>
+  <div class="policy-modal-panel">
+    <div class="policy-modal-header">
+      <div class="policy-modal-tabs">
+        <button id="tabRu" class="policy-tab" onclick="switchLang('ru')">Русский</button>
+        <button id="tabEn" class="policy-tab" onclick="switchLang('en')">English</button>
+      </div>
+      <div style="display: flex; align-items: center; gap: 10px;">
+        
+      </div>
+    </div>
+  </div>
+ </div>
+
 <footer class="footer">
   <div class="footer-inner">
     <div class="footer-col footer-brand">
