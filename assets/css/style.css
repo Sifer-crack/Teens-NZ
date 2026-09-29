@@ -324,7 +324,7 @@ header{
 .card{
   background: var(--card-bg);
   border:1px solid var(--card-border);
-  border-radius:18px;
+  border-radius:30px;
   padding:28px;
   transition: background .25s ease, border-color .25s ease;
 }
