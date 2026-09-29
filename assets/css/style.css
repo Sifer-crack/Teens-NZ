@@ -470,3 +470,21 @@ footer{
   .footer-inner{ padding:36px 20px; gap:28px; }
   .footer-contact{ align-items:flex-start; }
 }
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 20px;
+    width: 100%;
+}
+
+.contact-grid .card {
+    min-width: 0;
+    height: 100%;
+}
+
+.contact-grid h3,
+.contact-grid p,
+.contact-grid a {
+    overflow-wrap: anywhere;
+}
