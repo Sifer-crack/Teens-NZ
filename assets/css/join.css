@@ -371,13 +371,35 @@ footer{
   position:relative;
   z-index:1;
   border-top:1px solid var(--border);
-  padding:36px 32px;
-  text-align:center;
-  color: var(--muted);
-  font-size:0.85rem;
-  transition: border-color .25s ease;
+  background: var(--footer-bg);
+  transition: border-color .25s ease, background .25s ease;
 }
-footer a{ color: var(--tan); }
+.footer-inner{
+  max-width:1080px;
+  margin:0 auto;
+  padding:44px 32px 36px;
+  display:flex;
+  justify-content:space-between;
+  gap:40px;
+  flex-wrap:wrap;
+}
+.footer-col{ display:flex; flex-direction:column; gap:6px; }
+.footer-brand{ max-width:380px; }
+.footer-brand p{
+  color: var(--muted);
+  font-size:0.9rem;
+  line-height:1.6;
+  margin-top:10px;
+}
+.footer-legal{ display:flex; flex-direction:column; gap:8px; margin-top:16px; }
+.footer-legal a, .footer-contact a{
+  color: var(--text);
+  font-size:0.9rem;
+  transition: color .2s ease;
+}
+.footer-legal a:hover, .footer-contact a:hover{ color: var(--footer-link-hover); }
+.footer-contact{ align-items:flex-end; }
+.footer-contact .email{ font-weight:600; }
 
 @media (max-width: 760px){
   .nav{ padding:14px 20px; }
