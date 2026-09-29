@@ -480,6 +480,7 @@ footer{
 
 .contact-grid .card {
     min-width: 0;
+    min-height: 280px;
     height: 100%;
 }
 
@@ -487,4 +488,8 @@ footer{
 .contact-grid p,
 .contact-grid a {
     overflow-wrap: anywhere;
+}
+
+.wrap {
+  max-width: 1300px;
 }
