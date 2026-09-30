@@ -13,9 +13,11 @@
     document.documentElement.setAttribute("data-theme", theme);
   })();
 </script>
-<link rel="stylesheet" href="../assets/css/style.css">
+<link rel="stylesheet" href="../assets/css/join.css">
 </head>
 <body>
+
+<div class="preview-banner">Это превью изменений — сайт в разработке</div>
 
 <header>
   <div class="nav">
@@ -33,7 +35,7 @@
     </div>
     <div class="menu-panel" id="menuPanel">
       <div class="menu-panel-inner">
-        <a href="../index.html" class="menu-link">Главная</a>
+        <a href="index.html" class="menu-link">Главная</a>
         <a href="about.html" class="menu-link">О нас</a>
         <a href="events.html" class="menu-link">Мероприятия</a>
         <a href="news.html" class="menu-link">Новости</a>
@@ -47,7 +49,7 @@
 
 <main>
 
-<section class="wrap narrow" style="text-align:center;">
+<section class="wrap narrow" style="text-align:center; padding-bottom:24px;">
   <span class="badge">ПРИСОЕДИНИТЬСЯ</span>
   <h1 class="page-title">Стать частью МолодЁЖ — это просто</h1>
   <p class="lede" style="margin:0 auto 24px;">
@@ -55,13 +57,46 @@
     какие встречи проходят ближе всего к вам.
   </p>
   <p style="color:var(--tan); font-weight:600; margin-bottom:32px;">@TeensNZ_bot</p>
-  <div style="display:flex; justify-content:center; gap:16px; flex-wrap:wrap; margin-bottom:56px;">
+  <div style="display:flex; justify-content:center; gap:16px; flex-wrap:wrap;">
     <a href="https://t.me/TeensNZ_bot" target="_blank" rel="noopener" class="btn-primary">Вступить в Telegram</a>
     <a href="contacts.html" class="btn-outline">Задать вопрос</a>
   </div>
 </section>
 
-<section class="wrap">
+<section class="wrap narrow" style="padding-top:24px; padding-bottom:24px;">
+  <div class="card" style="text-align:left;">
+    <h3 style="color:var(--tan); font-size:1.2rem; margin-bottom:8px;">Не получается написать в Telegram?</h3>
+    <p style="color:var(--slate); font-size:0.9rem; line-height:1.6; margin-bottom:24px;">
+      Оставьте сообщение здесь — оно придёт прямо нам на почту, и мы ответим вам в Telegram или по email.
+    </p>
+    <form class="contact-form" action="https://formspree.io/f/mrpbrlwr" method="POST">
+      <input type="hidden" name="_subject" value="Новое сообщение с сайта МолодЁЖ">
+      <div class="form-row">
+        <label for="join-name">Имя</label>
+        <input type="text" id="join-name" name="name" required>
+      </div>
+      <div class="form-row">
+        <label for="join-telegram">Telegram username</label>
+        <input type="text" id="join-telegram" name="telegram" placeholder="@username" required>
+      </div>
+      <div class="form-row">
+        <label for="join-email">Email (необязательно)</label>
+        <input type="email" id="join-email" name="email">
+      </div>
+      <div class="form-row">
+        <label for="join-dob">Дата рождения (необязательно)</label>
+        <input type="date" id="join-dob" name="date_of_birth">
+      </div>
+      <div class="form-row">
+        <label for="join-message">Сообщение</label>
+        <textarea id="join-message" name="message" rows="4" required></textarea>
+      </div>
+      <button type="submit" class="btn-primary" style="width:100%; text-align:center; border:none; cursor:pointer;">Отправить сообщение</button>
+    </form>
+  </div>
+</section>
+
+<section class="wrap" style="padding-top:24px;">
   <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(200px,1fr)); gap:20px; text-align:left;">
     <div class="card">
       <h3 style="color:var(--tan); margin-bottom:10px; font-size:1rem;">1. Напишите нам</h3>
@@ -80,9 +115,22 @@
 
 </main>
 
-<footer>
-  МолодЁЖ — русскоязычное сообщество Новой Зеландии и Австралии ·
-  <a href="https://t.me/TeensNZ_bot" target="_blank" rel="noopener">Telegram</a>
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-col footer-brand">
+      <span class="brand-name">Молод<span>ЁЖ</span></span>
+      <p>Русскоязычное сообщество подростков Новой Зеландии и Австралии.</p>
+      <nav class="footer-legal">
+        <a href="#" data-pdf-src="../assets/docs/privacy-policy.pdf" data-pdf-title="Политика конфиденциальности">Политика конфиденциальности</a>
+      </nav>
+    </div>
+    <div class="footer-col footer-contact">
+      <a href="https://t.me/TeensNZ_bot" target="_blank" rel="noopener">Telegram</a>
+      <a href="https://www.instagram.com/molodezhnz/" target="_blank" rel="noopener"><i class="fa-brands fa-instagram"></i> Instagram</a>
+      <a href="https://www.facebook.com/profile.php?id=61591511156617" target="_blank" rel="noopener"><i class="fa-brands fa-facebook"></i> Facebook</a>
+      <a href="mailto:nzslavteens@gmail.com" class="email">nzslavteens@gmail.com</a>
+    </div>
+  </div>
 </footer>
 
 <script src="../assets/js/nav.js"></script>
